@@ -10,8 +10,12 @@
   <body>
     <div class="container">
       <div class="left">
-        <img src="./images/icon-map.svg" alt="Map icon" />
-        <h1>Find the best deals on flights right now</h1>
+        <div class="map">
+          <img src="./images/icon-map.svg" alt="Map icon" class="map-icon" />
+        </div>
+        <div class="text-control">
+          <h1>Find the best deals on flights right now</h1>
+        </div>
         <div class="stars">
           <img src="./images/icon-star.svg" alt="Star icon" class="star" />
           <img src="./images/icon-star.svg" alt="Star icon" class="star" />
@@ -22,38 +26,63 @@
             alt="Star icon"
             class="star half-star"
           />
-          <p>
-            Our customers rate us 4.5 out of 5 stars based on 3200+ reviews!
-          </p>
+          <div class="text-control">
+            <p>
+              Our customers rate us 4.5 out of 5 stars based on 3200+ reviews!
+            </p>
+          </div>
         </div>
-        <div class="right">
-          <form action="#">
-            <div class="form-container">
-              <div class="control">
+      </div>
+      <div class="right">
+        <form action="#">
+          <div class="form-container">
+            <div class="control trip">
+              <div class="item">
                 <input type="radio" name="trip-info" id="round-trip" />
                 <label for="round-trip">Round Trip</label>
+              </div>
+              <div class="item">
                 <input type="radio" name="trip-info" id="one-way-trip" />
                 <label for="one-way-trip">One Way</label>
               </div>
-              <div class="control">
-                <img src="./images/icon-location.svg" alt="location icon" />
-                <input type="text" placeholder="Leaving from..." />
-              </div>
-              <div class="control">
-                <img src="./images/icon-location.svg" alt="location icon" />
-                <input type="text" placeholder="Going to..." />
-              </div>
-              <div class="control">
+            </div>
+            <div class="control">
+              <img src="./images/icon-location.svg" alt="location icon" />
+              <input type="text" placeholder="Leaving from..." />
+            </div>
+            <div class="control">
+              <img src="./images/icon-location.svg" alt="location icon" />
+              <input type="text" placeholder="Going to..." />
+            </div>
+            <div class="control dates">
+              <div class="item">
                 <img src="./images/icon-calander.svg" alt="calendar icon" />
-                <input type="date" placeholder="Depart" />
+                <input
+                  class="input-dates"
+                  type="text"
+                  onfocus="(this.type='date')"
+                  placeholder="Depart"
+                />
               </div>
-              <div class="control">
+              <div class="item">
                 <img src="./images/icon-calander.svg" alt="calendar icon" />
-                <input type="date" placeholder="Return" />
+                <input
+                  class="input-dates"
+                  type="text"
+                  onfocus="(this.type='date')"
+                  placeholder="Return"
+                />
               </div>
-              <div class="control">
-                <img src="./images/icon-calander.svg" alt="calendar icon" />
-                <select name="passengers" id="passengers">
+            </div>
+            <div class="control dropdowns">
+              <div class="item">
+                <img src="./images/icon-user.svg" alt="calendar icon" />
+                <select
+                  name="passengers"
+                  id="passengers"
+                  class="input-dropdowns"
+                >
+                  <option value="" selected>Passengers</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -66,24 +95,24 @@
                   <option value="10">10</option>
                 </select>
               </div>
-              <div class="control">
+              <div class="item">
                 <img
                   src="./images/icon-star.svg"
                   alt="Star icon"
-                  class="star economy-star"
+                  class="economy-star"
                 />
-                <select name="class" id="class">
+                <select name="class" id="class" class="input-dropdowns">
                   <option value="economy">Economy</option>
                   <option value="first-class">First Class</option>
                   <option value="standby">Standby</option>
                 </select>
               </div>
-              <div class="control">
-                <input type="submit" value="Search Flights" />
-              </div>
             </div>
-          </form>
-        </div>
+          </div>
+          <div class="submit-control">
+            <input type="submit" value="Search Flights" />
+          </div>
+        </form>
       </div>
     </div>
   </body>
